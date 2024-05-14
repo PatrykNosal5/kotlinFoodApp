@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginBottom="5dp"
+    tools:context=".fragments.FormFragment">
+
+
+    <EditText
+        android:id="@+id/fieldName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Podaj nazwe"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <TextView
+        android:id="@+id/textDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Wybierz date przydatnosci"
+        app:layout_constraintEnd_toEndOf="@+id/fieldName"
+        app:layout_constraintStart_toStartOf="@+id/fieldName"
+        app:layout_constraintTop_toBottomOf="@+id/fieldName" />
+
+    <TextView
+        android:id="@+id/textCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Wybierz kategorie"
+        app:layout_constraintEnd_toEndOf="@+id/fieldDate"
+        app:layout_constraintStart_toStartOf="@+id/fieldDate"
+        app:layout_constraintTop_toBottomOf="@+id/fieldDate" />
+
+    <EditText
+        android:id="@+id/fieldQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/textQuantity"
+        app:layout_constraintStart_toStartOf="@+id/textQuantity"
+        app:layout_constraintTop_toBottomOf="@+id/textQuantity" />
+
+    <TextView
+        android:id="@+id/textQuantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Podaj ilość"
+        app:layout_constraintEnd_toEndOf="@+id/textCategory"
+        app:layout_constraintStart_toStartOf="@+id/textCategory"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#03A9F4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Dodaj" />
+
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="@+id/fieldName"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="@+id/fieldName"
+        app:layout_constraintTop_toBottomOf="@+id/textCategory">>
+
+        <RadioButton
+            android:id="@+id/radioButtonKosm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kosmetyki" />
+
+        <RadioButton
+            android:id="@+id/radioButtonLeki"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Leki" />
+
+        <RadioButton
+            android:id="@+id/radioButtonProd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Produkty_Spozywcze" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/fieldDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="@+id/textDate"
+        app:layout_constraintStart_toStartOf="@+id/textDate"
+        app:layout_constraintTop_toBottomOf="@+id/textDate" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="75dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
